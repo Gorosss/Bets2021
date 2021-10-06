@@ -1,0 +1,143 @@
+
+õbusinessLogic.BLFacadeImplementation#addUser(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaá á("startingBlock*¢
+2`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaã ã(é
+ã
+`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaç ç(
+%0java.io.PrintStream"__id*
+""√
+¿
+`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaç ç(B
+%1java.lang.String"__concat*
+New Account created: *
+
+	pUsernamejava.lang.String˜Ù
+`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaç ç(C
+
+%2void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%0java.io.PrintStream*
+
+%1java.lang.String2println(Ljava/lang/String;)"j
+`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaé é(
+""*Õ
+startingBlocka
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaá á(òß
+§
+`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaÜ Ü(
+%5"
+__annotate*
+	WebMethod*
+
+	pUsernamejava.lang.Stringö
+ó
+`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaá" á(+
+	pUsernamejava.lang.String"__annotation*
+
+%5´
+®
+`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaÜ Ü(
+%6"
+__annotate*
+	WebMethod*#
+!
+pUserPasswordjava.lang.Stringû
+õ
+`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaá4 á(A!
+pUserPasswordjava.lang.String"__annotation*
+
+%6®
+•
+`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaÜ Ü(
+%7"
+__annotate*
+	WebMethod* 
+
+
+pUserEmailjava.lang.Stringõ
+ò
+`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaáJ á(T
+
+pUserEmailjava.lang.String"__annotation*
+
+%7≠
+™
+`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaÜ Ü(
+%8"
+__annotate*
+	WebMethod*%
+#
+pBankCardNumberjava.lang.String†
+ù
+`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaá] á(l#
+pBankCardNumberjava.lang.String"__annotation*
+
+%8´
+®
+`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaÜ Ü(
+%9"
+__annotate*
+	WebMethod*#
+!
+pUserRealNamejava.lang.Stringü
+ú
+a
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaáu á(Ç!
+pUserRealNamejava.lang.String"__annotation*
+
+%9´
+®
+`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaÜ Ü(
+%10"
+__annotate*
+	WebMethod*"
+ 
+pUserSurnamejava.lang.String†
+ù
+b
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaáã á(ó 
+pUserSurnamejava.lang.String"__annotation*
+
+%10*
+2
+1*Â
+1`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaë ë(é
+ã
+`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaë ë(
+%3java.io.PrintStream"__id*
+""Ä˝
+`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaë ë(;
+
+%4void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%3java.io.PrintStream*!
+Account could not be created.2println(Ljava/lang/String;)"j
+`
+TC:/Users/jongo/git/bets/Bets/src/main/java/businessLogic/BLFacadeImplementation.javaí í(
+"":
+	pUsernamejava.lang.String:!
+pUserPasswordjava.lang.String:
+
+pUserEmailjava.lang.String:#
+pBankCardNumberjava.lang.String:!
+pUserRealNamejava.lang.String: 
+pUserSurnamejava.lang.StringB(&
+$businessLogic.BLFacadeImplementation
