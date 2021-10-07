@@ -19,6 +19,8 @@ import com.toedter.components.JSpinField;
 
 
 public class CreateForecastGUI extends JFrame {
+	private static final String TAHOMA = "Tahoma";
+
 	private static final long serialVersionUID = 1L;
 
 	private final JLabel jLabelEventDate = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("EventDate"));
@@ -106,7 +108,7 @@ public class CreateForecastGUI extends JFrame {
 		this.getContentPane().add(jLabelEventDate, null);
 		this.getContentPane().add(jLabelQueries);
 		this.getContentPane().add(jLabelEvents);
-		jButtonClose.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		jButtonClose.setFont(new Font(TAHOMA, Font.PLAIN, 20));
 
 		jButtonClose.setBounds(new Rectangle(40, 410, 130, 30));
 
@@ -442,7 +444,7 @@ public class CreateForecastGUI extends JFrame {
 				
 			}
 		});
-		btnBet.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		btnBet.setFont(new Font(TAHOMA, Font.PLAIN, 22));
 		btnBet.setBounds(540, 399, 111, 51);
 		getContentPane().add(btnBet);
 		
@@ -454,21 +456,21 @@ public class CreateForecastGUI extends JFrame {
 				
 			}
 		});
-		buttonOne.setFont(new Font("Tahoma", Font.PLAIN, 26));
+		buttonOne.setFont(new Font(TAHOMA, Font.PLAIN, 26));
 		buttonOne.setBounds(441, 241, 53, 51);
 		getContentPane().add(buttonOne);
 		
 		
 		buttonGroup.add(buttonX);
 		buttonX.setVisible(false);
-		buttonX.setFont(new Font("Tahoma", Font.PLAIN, 26));
+		buttonX.setFont(new Font(TAHOMA, Font.PLAIN, 26));
 		buttonX.setBounds(506, 241, 53, 51);
 		getContentPane().add(buttonX);
 		
 		
 		buttonGroup.add(buttonTwo);
 		buttonTwo.setVisible(false);
-		buttonTwo.setFont(new Font("Tahoma", Font.PLAIN, 26));
+		buttonTwo.setFont(new Font(TAHOMA, Font.PLAIN, 26));
 		buttonTwo.setBounds(571, 241, 53, 51);
 		getContentPane().add(buttonTwo);
 		
