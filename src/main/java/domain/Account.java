@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity 
-public class Account extends UserName {
+public class Account {
 
+	@Id
+	private String userName;
 	private String userRealName;
 	private String userSurname;
 	private String userPassword;
@@ -19,7 +22,8 @@ public class Account extends UserName {
 
 
 	public Account(String pUserName, String pUserPassword, boolean pIsAdmin, String pUserEmail, String pBankCardNumber, String pUserRealName, String pUserSurname) {
-		super(pUserName);
+		super();
+		this.userName = pUserName;
 		this.userPassword = pUserPassword;
 		this.userWallet = 0;
 		this.isAdmin = pIsAdmin;
@@ -45,6 +49,10 @@ public class Account extends UserName {
 	
 	public String getUserEmail() {
 		return userEmail;
+	}
+	
+	public String getUserName() {
+		return userName;
 	}
 	
 	public String getPassword() {

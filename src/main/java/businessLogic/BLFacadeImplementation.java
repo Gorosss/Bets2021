@@ -361,7 +361,7 @@ public class BLFacadeImplementation  implements BLFacade {
     		ArrayList<Forecast> forecasts=(ArrayList<Forecast>) dbManager.getForecastsOfQuestion(q);
     		for(Forecast f:forecasts) {
     			if(q.getResult().equals(f.getMyGuess())) {
-    				dbManager.paid(f.getUserName(),f.getWin());
+    				dbManager.paid(f.getUser(),f.getWin());
     			}
     		}
 

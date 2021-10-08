@@ -2,6 +2,7 @@ package domain;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlAccessType;

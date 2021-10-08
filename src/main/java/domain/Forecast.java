@@ -1,6 +1,7 @@
 package domain;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -8,7 +9,7 @@ import javax.persistence.Id;
 import gui.LoginRegisterGUI;
 
 @Entity
-public class Forecast extends UserName {
+public class Forecast {
 	
 	private static int numberOfForecasts = 0;
 	
@@ -17,6 +18,7 @@ public class Forecast extends UserName {
 	private Question question;		// Pregunta a la que el pronostico esta relacionado
 	private double myBet;			// Lo que yo he apostado
 	private double win;
+	private String user;			// Usuario que ha hecho el forecast
 	private String myGuess;			// Lo que yo creo q va a pasar . Para determinar si el pronostico 
 									// ha sido acertado, comparar con el attributo result de la pregunta
 									// asociada. Ambos campos (result y este mismo) son strings para 
@@ -24,20 +26,20 @@ public class Forecast extends UserName {
 	private float multiplier;
 	
 	public Forecast(Question pQuestion, double pBet, String pGuess, double win) {
-		super(LoginRegisterGUI.getBusinessLogic().getLoggedUsername());
 		this.forecastNumber = Forecast.numberOfForecasts++;
 		this.question = pQuestion;
 		this.myBet = pBet;
 		this.myGuess = pGuess;
+		this.user = LoginRegisterGUI.getBusinessLogic().getLoggedUsername();
 		this.win=win;
 	}
 	public Forecast(Question pQuestion, double pBet, String pGuess, double win,String u) {
-		super(u);
 		this.forecastNumber = Forecast.numberOfForecasts++;
 		this.question = pQuestion;
 		this.myBet = pBet;
 		this.myGuess = pGuess;
 		this.win=win;
+		this.user=u;
 	}
 	
 	
@@ -66,6 +68,10 @@ public class Forecast extends UserName {
 	
 	public void setMyGuess (String pMyGuess) {
 		this.myGuess = pMyGuess;
+	}
+	
+	public String getUser() {
+		return user;
 	}
 	
 	public double getWin() {

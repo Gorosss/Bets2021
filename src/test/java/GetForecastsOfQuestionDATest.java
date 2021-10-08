@@ -162,7 +162,7 @@ class GetForecastsOfQuestionDATest {
 		}finally {
 			testDA.open();
 			boolean a = testDA.removeEvent(ev);
-			boolean b = testDA.deleteForecastAndUser(f, f.getUserName());
+			boolean b = testDA.deleteForecastAndUser(f, f.getUser());
 			testDA.close();
 			System.out.println("Finally " + a +" "+ b);
 		}
@@ -235,9 +235,9 @@ class GetForecastsOfQuestionDATest {
 			fail();
 		}finally {
 			testDA.open();	
-			boolean a = testDA.deleteForecastAndUser(f, f.getUserName());
-			boolean a2 = testDA.deleteForecastAndUser(f2, f.getUserName());
-			boolean a3 = testDA.deleteForecastAndUser(f3, f.getUserName());
+			boolean a = testDA.deleteForecastAndUser(f, f.getUser());
+			boolean a2 = testDA.deleteForecastAndUser(f2, f.getUser());
+			boolean a3 = testDA.deleteForecastAndUser(f3, f.getUser());
 
 			boolean b = testDA.removeEvent(ev);						
 			testDA.close();

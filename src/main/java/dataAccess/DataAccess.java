@@ -27,7 +27,6 @@ import domain.Account;
 import domain.Event;
 import domain.Forecast;
 import domain.Question;
-import domain.UserName;
 import exceptions.QuestionAlreadyExist;
 
 /**
@@ -39,9 +38,6 @@ public class DataAccess  {
 
 
 	ConfigXML c=ConfigXML.getInstance();
-	
-	
-	private Account u;
 
 	public DataAccess(boolean initializeMode)  {
 
@@ -281,7 +277,7 @@ public class DataAccess  {
 		System.out.println("DataBase closed");
 	}
 	
-	public void storeAccount(UserName user) {
+	public void storeAccount(Account user) {
         db.getTransaction().begin();
         db.persist(user);
         db.getTransaction().commit();
@@ -289,7 +285,7 @@ public class DataAccess  {
     
 	public boolean isUsernameAvailable(Account acc) {
 
-		UserName cuenta = db.find(Account.class, acc.getUserName());
+		Account cuenta = db.find(Account.class, acc.getUserName());
 
 		
 		if (cuenta != null) {
@@ -470,23 +466,23 @@ public class DataAccess  {
 	
 	public void deleteForecast(Forecast forecast,String loggedUser) {
 		db.getTransaction().begin();
-		u =db.find(Account.class, loggedUser);
+		Account a =db.find(Account.class, loggedUser);
 		Forecast f= db.find(Forecast.class, forecast.getForecastNumber());
-		u.deletIndexForecast(f);
+		a.deletIndexForecast(f);
 		db.remove(f);		
 		db.getTransaction().commit();
 	}
 	
 	public void paid(String user, double win) {
 		db.getTransaction().begin();
-		u= db.find(Account.class, user);
+		Account u= db.find(Account.class, user);
 		u.paid(win);		
 		db.getTransaction().commit();
 	}
 	
 	public void restMoneyToUser(String pUserName, Double money) {
 		db.getTransaction().begin();
-		u = db.find(Account.class, pUserName);
+		Account u= db.find(Account.class, pUserName);
 		u.rest(money);		
 		db.getTransaction().commit();
 	}
@@ -532,6 +528,7 @@ public class DataAccess  {
 		TypedQuery<Forecast> query = db.createQuery("SELECT f FROM Forecast f",Forecast.class);
         forecasts = query.getResultList();
         for(Forecast f: forecasts) {
+        	System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         	db.getTransaction().begin();
     		db.remove(f);
     		db.getTransaction().commit();

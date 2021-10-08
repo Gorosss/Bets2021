@@ -17,7 +17,6 @@ import domain.Account;
 import domain.Event;
 import domain.Forecast;
 import domain.Question;
-import domain.UserName;
 
 public class TestUtilityDataAccess {
 	protected  EntityManager  db;
@@ -135,7 +134,7 @@ public class TestUtilityDataAccess {
 			return true;
 		}
 		
-		public void storeAccount(UserName user) {
+		public void storeAccount(Account user) {
 	        db.getTransaction().begin();
 	        db.persist(user);
 	        db.getTransaction().commit();
