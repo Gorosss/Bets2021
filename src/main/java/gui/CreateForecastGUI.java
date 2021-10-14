@@ -5,7 +5,6 @@ import configuration.UtilDate;
 
 import com.toedter.calendar.JCalendar;
 
-import domain.Account;
 import domain.Question;
 import javax.swing.*;
 import java.awt.*;

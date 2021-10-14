@@ -15,7 +15,6 @@ import java.beans.PropertyChangeListener;
 import businessLogic.BLFacade;
 import configuration.UtilDate;
 import domain.Event;
-import domain.Question;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
 

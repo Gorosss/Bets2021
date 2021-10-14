@@ -15,7 +15,6 @@ import java.text.DateFormat;
 import java.util.*;
 
 import javax.swing.table.DefaultTableModel;
-import com.toedter.components.JSpinField;
 
 
 public class FindForecastGUI extends JFrame {
