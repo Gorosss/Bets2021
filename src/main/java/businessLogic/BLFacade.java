@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 import domain.Question;
+import domain.Account;
 import domain.Event;
 import domain.Forecast;
 import exceptions.EventFinished;
@@ -153,6 +154,13 @@ public interface BLFacade  {
 	 * @param result
 	 */
 	@WebMethod public void setQuestionResult(Integer numero, String result);
+	
+	/**
+	 * Return an account with the info of it
+	 * @param user User of the account
+	 * @return Account
+	 */
+	@WebMethod public Account getAccount(String user);
 	 
 	/**
 	 * Method to close a event
@@ -172,13 +180,6 @@ public interface BLFacade  {
 	 * @param queries
 	 */
 	@WebMethod public void paidUsers(Vector<Question> queries)throws NullPointerException,RuntimeException;
-	
-	/**
-	 * Method to get the actual user information
-	 * @param info
-	 * @return
-	 */
-	@WebMethod public String getAccountInfo(String info);
 	
 	/**
 	 * Method that return the user wallet

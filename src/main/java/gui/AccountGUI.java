@@ -1,7 +1,11 @@
 package gui;
 
+import javax.jws.WebMethod;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+
+import domain.Account;
+
 import java.awt.Font;
 
 public class AccountGUI extends JFrame {
@@ -17,7 +21,7 @@ public class AccountGUI extends JFrame {
 		JLabel lblNombreApellido = new JLabel("NOMBRE, APELLIDO");
 		lblNombreApellido.setBounds(21, 61, 314, 23);
 		getContentPane().add(lblNombreApellido);
-		lblNombreApellido.setText(LoginRegisterGUI.getBusinessLogic().getAccountInfo("name") + " " + LoginRegisterGUI.getBusinessLogic().getAccountInfo("surname"));
+		lblNombreApellido.setText(getAccountInfo("name") + " " + getAccountInfo("surname"));
 		
 		JLabel lblUsername = new JLabel("Username:");
 		lblUsername.setBounds(21, 90, 79, 23);
@@ -38,28 +42,68 @@ public class AccountGUI extends JFrame {
 		JLabel lblEmail = new JLabel("EMAIL");
 		lblEmail.setBounds(21, 200, 329, 23);
 		getContentPane().add(lblEmail);
-		lblEmail.setText(LoginRegisterGUI.getBusinessLogic().getAccountInfo("email"));
+		lblEmail.setText(getAccountInfo("email"));
 		
 		JLabel lblUsername_1 = new JLabel("username");
 		lblUsername_1.setBounds(90, 95, 260, 19);
 		getContentPane().add(lblUsername_1);
-		lblUsername_1.setText(LoginRegisterGUI.getBusinessLogic().getAccountInfo("username"));
+		lblUsername_1.setText(getAccountInfo("username"));
 		
 		JLabel lblContrasena = new JLabel("contrasena");
 		lblContrasena.setBounds(83, 115, 267, 14);
 		getContentPane().add(lblContrasena);
-		lblContrasena.setText(LoginRegisterGUI.getBusinessLogic().getAccountInfo("password"));
+		lblContrasena.setText(getAccountInfo("password"));
 		
 		JLabel lblDineros = new JLabel("dineros");
 		lblDineros.setBounds(65, 168, 285, 14);
 		getContentPane().add(lblDineros);
-		lblDineros.setText(LoginRegisterGUI.getBusinessLogic().getAccountInfo("wallet"));
+		lblDineros.setText(getAccountInfo("wallet"));
 		
 		JLabel lblDineroscuenta = new JLabel("dinerosCuenta");
 		lblDineroscuenta.setBounds(98, 149, 252, 14);
 		getContentPane().add(lblDineroscuenta);
-		lblDineroscuenta.setText(LoginRegisterGUI.getBusinessLogic().getAccountInfo("card"));
+		lblDineroscuenta.setText(getAccountInfo("card"));
 		
 		
 	}
+
+	/**
+	 * Method to get the actual user information
+	 * @param info
+	 * @return
+	 */
+	@WebMethod public String getAccountInfo(String info){
+		Account cuenta =LoginRegisterGUI.getBusinessLogic().getAccount(LoginRegisterGUI.getBusinessLogic().getLoggedUsername());
+    	String s = null;
+
+		switch (info.toLowerCase()) {
+    	
+		case "username":
+			s = cuenta.getUserName();
+			break;
+		case "password":
+			s = cuenta.getPassword();
+			break;
+		case "name":
+			s = cuenta.getRealName();
+			break;
+		case "surname":
+			s = cuenta.getSurname();
+			break;
+		case "card":
+			s = cuenta.getUserBankCard();
+			break;
+		case "email":
+			s = cuenta.getUserEmail();
+			break;
+		case "wallet":
+			s = Double.toString(cuenta.getWallet());
+			break;
+		default:
+			System.out.println("Error. La informacion deseada no esta contemplada. Codigo 12");
+			break;
+		} 
+    	return s;
+    }
+    
 }

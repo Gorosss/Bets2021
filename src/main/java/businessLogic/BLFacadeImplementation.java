@@ -291,6 +291,19 @@ public class BLFacadeImplementation  implements BLFacade {
     }
     
     /**
+	 * Return an accoutn with the info of it
+	 * @param user User of the account
+	 * @return Account
+	 */
+	@WebMethod 
+	public Account getAccount(String user) {
+		dbManager.open(false);
+    	Account cuenta = dbManager.getUser(loggedUser);
+    	dbManager.close();
+    	return cuenta;
+	}
+    
+    /**
      * Add forecast to the DB
      */
     @WebMethod
