@@ -19,7 +19,7 @@ import domain.Forecast;
 import domain.Question;
 import utility.TestUtilityDataAccess;
 
-class GetForecastsOfQuestionDATestGorostegui2 {
+class GetForecastsOfQuestionDAGorostegui2Test {
 
 	static DataAccessGorostegui2 sut = new DataAccessGorostegui2(ConfigXML.getInstance().getDataBaseOpenMode().equals("initialize"));;
 	static TestUtilityDataAccess testDA = new TestUtilityDataAccess();
@@ -36,7 +36,7 @@ class GetForecastsOfQuestionDATestGorostegui2 {
 			assertThrows(NullPointerException.class, () -> sut.getForecastsOfQuestion(q));
 			
 		} catch (RuntimeException e) {
-			// if the program goes to this point fail
+			// if the program goes to this point faill
 			fail();
 		}		
 	}
