@@ -246,19 +246,6 @@ class GetForecastsOfQuestionDATest {
 		
 	}
 	
-	@Test
-	@DisplayName("Test 1: Quesion is null")
-	void testGetForecastsOfQuestion8() {
-		
-		try {
-			
-			Question q=null;
-			assertThrows(NullPointerException.class, () -> sut.getForecastsOfQuestion(q));
-			
-		} catch (RuntimeException e) {
-			// if the program goes to this point fail
-			fail();
-		}		
-	}
+
 
 }
